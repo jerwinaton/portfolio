@@ -1,0 +1,15 @@
+.landing-page{
+    height: 500px;
+    background: var(--lightbluegray);
+}
+.landing-page h1{
+    font-family: "Comfortaa";
+    color: white;
+}
+.landing-page a{
+color: white;
+}
+#profile-img-bg circle {
+    /* fill: red; */
+    /* stroke: red; */
+}
