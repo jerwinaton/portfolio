@@ -1,5 +1,5 @@
 .landing-page{
-    height: 500px;
+    height: 600px;
     background: var(--lightbluegray);
 }
 .landing-page h1{
@@ -9,7 +9,7 @@
 .landing-page a{
 color: white;
 }
-#profile-img-bg circle {
-    /* fill: red; */
-    /* stroke: red; */
-}
+/* #profile-img-bg circle {
+    fill: red;
+    stroke: red;
+} */
