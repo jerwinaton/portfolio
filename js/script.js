@@ -15,4 +15,25 @@ $(document).ready(() => {
     $("#profile-img-bg").find("circle").css("fill", "#2C4753");
     $("#profile-img-bg").css("transform", "scale(1)");
   });
+
+  // changing heading texts below jerwin aton
+  let headingTexts = [
+    "I Design Websites",
+    "I Develop Websites",
+    "I'm SEO Literate",
+    "Let's Connect!",
+  ];
+  let counter = 0;
+  // $("#changing-heading").css("transition","opacity .2s ease");
+  window.setInterval(() => {
+    /// call your function here
+    counter++;
+    if (counter >= headingTexts.length) {
+      counter = 0;
+    }
+    $("#changing-heading").fadeTo("slow", 0);
+    setTimeout(() => {
+      $("#changing-heading").text(headingTexts[counter]).fadeTo("slow", 1);
+    }, 500);
+  }, 3000);
 });
