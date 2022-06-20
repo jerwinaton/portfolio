@@ -1,0 +1,59 @@
+/* earist */
+.earist{
+    background-color: #FF6A6A;
+    color: white;
+    height: 95vh;
+    padding-top:56px;
+    min-height:500px;
+}
+#earist-image{
+    background-image:url('../images/earist-school.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+}
+.earist h6{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.earist h4{
+    font-family: 'Comfortaa', sans-serif;
+}
+@media (min-width:768px) {
+    .earist{
+        height: 90vh;
+        padding-top:100px;
+    }
+}
+/* aguinaldo-shs */
+.aguinaldo-shs{
+    background-color: #3B28AD;
+    color: white;
+    height: 95vh;
+    /* padding-top:100px; */
+    min-height:500px;
+}
+#aguinaldo-shs-image{
+    background-image:url('../images/aguinaldo-school.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 50vh;
+}
+.aguinaldo-shs h6{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.aguinaldo-shs h4{
+    font-family: 'Comfortaa', sans-serif;
+
+}
+@media (min-width:768px) {
+    .aguinaldo-shs{
+        height: 90vh;
+        padding-top: 100px;
+    }
+}
