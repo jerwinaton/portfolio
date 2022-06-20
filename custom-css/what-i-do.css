@@ -1,0 +1,35 @@
+.what-i-do{
+    height: 100vh;
+    background-color: var(--lightbluegray);
+    color: white;
+}
+/* .what-i-do > div > div:nth-child(1){
+    background-image:url('../images/jerwin-on-laptop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+} */
+/* .what-i-do > div > div:nth-child(2){
+    background-color: var(--maroon);
+    color: white;
+    height: 50vh;
+} */
+.what-i-do > div > div:nth-child(2) h6{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+.what-i-do > div > div:nth-child(2) h2{
+    font-family: 'Comfortaa', sans-serif;
+}
+@media (min-width:567px) {
+    .what-i-do{
+        height: 500px;
+    }
+    .what-i-do > div > div:nth-child(1){
+        height: 100%;
+    }
+    .what-i-do > div > div:nth-child(2){
+        height: 100%;
+    }
+}
