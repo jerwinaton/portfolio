@@ -1,17 +1,17 @@
 .who-am-i{
-    height: 500px;
+    height: 100vh;
 }
 .who-am-i > div > div:nth-child(1){
     background-image:url('../images/jerwin-on-laptop.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-     height: 100%;
-    position: relative;
     background-position: center;
+    height: 50vh;
 }
 .who-am-i > div > div:nth-child(2){
     background-color: var(--maroon);
     color: white;
+    height: 50vh;
 }
 .who-am-i > div > div:nth-child(2) h6{
     font-family: 'Poppins', sans-serif;
@@ -19,4 +19,15 @@
 }
 .who-am-i > div > div:nth-child(2) h2{
     font-family: 'Comfortaa', sans-serif;
+}
+@media (min-width:567px) {
+    .who-am-i{
+        height: 500px;
+    }
+    .who-am-i > div > div:nth-child(1){
+        height: 100%;
+    }
+    .who-am-i > div > div:nth-child(2){
+        height: 100%;
+    }
 }
