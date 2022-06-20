@@ -1,4 +1,4 @@
-/* earist */
+/* earist -------------------------------------------------*/
 .earist{
     background-color: #FF6A6A;
     color: white;
@@ -27,7 +27,7 @@
         padding-top:100px;
     }
 }
-/* aguinaldo-shs */
+/* aguinaldo-shs -------------------------------------------------*/
 .aguinaldo-shs{
     background-color: #3B28AD;
     color: white;
@@ -53,6 +53,66 @@
 }
 @media (min-width:768px) {
     .aguinaldo-shs{
+        height: 90vh;
+        padding-top: 100px;
+    }
+}
+/* aguinaldo-shs -------------------------------------------------*/
+.arellano{
+    background-color: #262160;
+    color: white;
+    height: 95vh;
+    /* padding-top:100px; */
+    min-height:500px;
+}
+#arellano-image{
+    background-image:url('../images/arellano-plaridel-school.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 50vh;
+}
+.arellano h6{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.arellano h4{
+    font-family: 'Comfortaa', sans-serif;
+
+}
+@media (min-width:768px) {
+    .arellano{
+        height: 90vh;
+        padding-top: 100px;
+    }
+}
+/* aguinaldo-shs -------------------------------------------------*/
+.aguinaldo-elem-hs{
+    background-color: #3B28AD;
+    color: white;
+    height: 95vh;
+    /* padding-top:100px; */
+    min-height:500px;
+}
+#aguinaldo-elem-hs-image{
+    background-image:url('../images/aguinaldo-school.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 50vh;
+}
+.aguinaldo-elem-hs h6{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.aguinaldo-elem-hs h4{
+    font-family: 'Comfortaa', sans-serif;
+
+}
+@media (min-width:768px) {
+    .aguinaldo-elem-hs{
         height: 90vh;
         padding-top: 100px;
     }
