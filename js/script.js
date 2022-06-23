@@ -26,7 +26,6 @@ $(document).ready(() => {
   let counter = 0;
   // $("#changing-heading").css("transition","opacity .2s ease");
   window.setInterval(() => {
-    /// call your function here
     counter++;
     if (counter >= headingTexts.length) {
       counter = 0;
@@ -35,5 +34,5 @@ $(document).ready(() => {
     setTimeout(() => {
       $("#changing-heading").text(headingTexts[counter]).fadeTo("slow", 1);
     }, 500);
-  }, 3000);
+  }, 2700);
 });
