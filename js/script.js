@@ -38,17 +38,19 @@ $(document).ready(() => {
     }, 500);
   }, 2700);
 
-  //project images in what i do section hover images effect
-  // $(".project-images-container img").on("mouseover", (obj) => {
-  //   console.log($(obj.currentTarget));
-  //   $(obj.currentTarget).css({
-  //     "z-index": "210",
-  //   });
-  // });
-  // $(".project-images-container img").on("mouseleave", (obj) => {
-  //   console.log($(obj.currentTarget));
-  //   $(obj.currentTarget).css({
-  //     "z-index": "100",
-  //   });
-  // });
+  // project images in what i do section hover images effect
+  $(".project-images-container > img").on("mouseover", (obj) => {
+    console.log($(obj.currentTarget));
+    // $(obj.currentTarget).css({
+    //   perspective: "1020px",
+    //   "transform-style": "preserve-3d",
+    //   transform: "rotateX(45deg)",
+    // });
+  });
+  $(".project-images-container img").on("mouseleave", (obj) => {
+    console.log($(obj.currentTarget));
+    $(obj.currentTarget).css({
+      // "z-index": "100",
+    });
+  });
 });
