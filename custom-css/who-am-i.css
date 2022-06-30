@@ -20,7 +20,7 @@
 .who-am-i > div > div:nth-child(2) h2{
     font-family: 'Comfortaa', sans-serif;
 }
-@media (min-width:567px) {
+@media (min-width:576px) {
     .who-am-i{
         height: 500px;
     }
