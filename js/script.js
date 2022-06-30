@@ -38,19 +38,30 @@ $(document).ready(() => {
     }, 500);
   }, 2700);
 
-  // project images in what i do section hover images effect
-  $(".project-images-container > img").on("mouseover", (obj) => {
-    console.log($(obj.currentTarget));
-    // $(obj.currentTarget).css({
-    //   perspective: "1020px",
-    //   "transform-style": "preserve-3d",
-    //   transform: "rotateX(45deg)",
-    // });
+  // latest project mouse over
+  $(".btn-latest-project").on("mouseover", () => {
+    $(".btn-latest-project svg > path").css({
+      fill: "#2c4753",
+    });
+    $(".btn-latest-project svg").css({
+      transition: "width .2s ease",
+      width: "40",
+    });
+    $(".btn-latest-project").css({
+      color: "#2c4753",
+      background: "#ffffff",
+    });
   });
-  $(".project-images-container img").on("mouseleave", (obj) => {
-    console.log($(obj.currentTarget));
-    $(obj.currentTarget).css({
-      // "z-index": "100",
+  $(".btn-latest-project").on("mouseleave", () => {
+    $(".btn-latest-project svg > path").css({
+      fill: "#ffffff",
+    });
+    $(".btn-latest-project svg").css({
+      width: "20",
+    });
+    $(".btn-latest-project").css({
+      color: "#ffffff",
+      background: "#2c4753",
     });
   });
 });
