@@ -38,28 +38,17 @@ $(document).ready(() => {
     }, 500);
   }, 2700);
 
-  // slick js slider
-  $(".customer-logos").slick({
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 1500,
-    arrows: false,
-    dots: false,
-    pauseOnHover: false,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 4,
-        },
-      },
-      {
-        breakpoint: 520,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-    ],
-  });
+  //project images in what i do section hover images effect
+  // $(".project-images-container img").on("mouseover", (obj) => {
+  //   console.log($(obj.currentTarget));
+  //   $(obj.currentTarget).css({
+  //     "z-index": "210",
+  //   });
+  // });
+  // $(".project-images-container img").on("mouseleave", (obj) => {
+  //   console.log($(obj.currentTarget));
+  //   $(obj.currentTarget).css({
+  //     "z-index": "100",
+  //   });
+  // });
 });

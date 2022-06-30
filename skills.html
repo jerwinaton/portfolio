@@ -60,7 +60,7 @@
                         <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium accusamus suscipit quibusdam hic nesciunt dolorem ad fugiat praesentium perferendis.</p>
                     </div>
                     <div class="col-12 col-sm-8 pt-5">  
-                        <div class="customer-logos slider">
+                        <div class="skills-logos slider">
                             <div class="slide"><img src="images/css.png"></div>
                             <div class="slide"><img src="images/html.png"></div>
                             <div class="slide"><img src="images/js.png"></div>
@@ -99,7 +99,32 @@
   <script src="lib/butter.js-master/src/butter.js"></script>
   <script src="js/script.js"></script>
   <script>
+    // butter js
      butter.init();
+       // slick js slider
+  $(".skills-logos").slick({
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1500,
+    arrows: false,
+    dots: false,
+    pauseOnHover: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 520,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+    ],
+  });
   </script>
   
   </html>
