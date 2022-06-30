@@ -64,4 +64,113 @@ $(document).ready(() => {
       background: "#2c4753",
     });
   });
+  // change bg color on scroll
+  $(window).on("scroll", () => {
+    var scrollTop = $(window).scrollTop();
+
+    // get who am i distance to top
+    let whoAmI = $(".who-am-i").offset().top;
+    let whoAmIDistanceToTop = whoAmI - scrollTop;
+
+    // get what i do distance to top
+    let whatIDo = $(".what-i-do").offset().top;
+    let whatIDoDistanceToTop = whatIDo - scrollTop;
+
+    // get sections
+    let landingPage = $(".landing-page");
+    let whoAmISection = $(".who-am-i > div > div:nth-child(2)");
+    let whatIDoSection = $(".what-i-do");
+
+    // add transition options to the sections' background property
+    landingPage.css("transition", "background .3s ease");
+    $("#profile-image-circle").css("transition", "background .3s ease");
+
+    whoAmISection.css("transition", "background .3s ease");
+    whatIDoSection.css("transition", "background .3s ease");
+    $(".project-images-container").css("transition", "background .3s ease");
+
+    // who am i section change
+    if (whoAmIDistanceToTop >= 300) {
+      whoAmISection.css({
+        background: "var(--lightbluegray)",
+      });
+      $("#profile-image-circle").css("fill", "var(--darkbluegray)");
+      landingPage.css({ background: "var(--lightbluegray)" });
+    } else if (whoAmIDistanceToTop < 300) {
+      whoAmISection.css("background", "var(--lightmaroon)");
+      $("#profile-image-circle").css("fill", "var(--darkmaroon)");
+
+      landingPage.css("background", "var(--lightmaroon)");
+      whatIDoSection.css("background", "var(--lightmaroon)");
+
+      $(".project-images-container").css("background", "var(--lightmaroon)");
+      $(".btn-latest-project").css("background", "var(--darkmaroon)");
+
+      // latest project mouse over
+      $(".btn-latest-project").on("mouseover", () => {
+        $(".btn-latest-project svg > path").css({
+          fill: "var(--darkmaroon)",
+        });
+        $(".btn-latest-project svg").css({
+          transition: "width .2s ease",
+          width: "40",
+        });
+        $(".btn-latest-project").css({
+          color: "var(--darkmaroon)",
+          background: "#ffffff",
+        });
+      });
+      $(".btn-latest-project").on("mouseleave", () => {
+        $(".btn-latest-project svg > path").css({
+          fill: "#ffffff",
+        });
+        $(".btn-latest-project svg").css({
+          width: "20",
+        });
+        $(".btn-latest-project").css({
+          color: "#ffffff",
+          background: "var(--darkmaroon)",
+        });
+      });
+    }
+
+    // who i do section change
+    if (whatIDoDistanceToTop < 300) {
+      whoAmISection.css({
+        background: "var(--lightbluegray)",
+      });
+      whatIDoSection.css({
+        background: "var(--lightbluegray)",
+      });
+      $(".project-images-container").css("background", "var(--lightbluegray)");
+      $(".btn-latest-project").css("background", "var(--darkbluegray)");
+      // latest project mouse over
+      $(".btn-latest-project").on("mouseover", () => {
+        $(".btn-latest-project svg > path").css({
+          fill: "#2c4753",
+        });
+        $(".btn-latest-project svg").css({
+          transition: "width .2s ease",
+          width: "40",
+        });
+        $(".btn-latest-project").css({
+          color: "#2c4753",
+          background: "#ffffff",
+        });
+      });
+      $(".btn-latest-project").on("mouseleave", () => {
+        $(".btn-latest-project svg > path").css({
+          fill: "#ffffff",
+        });
+        $(".btn-latest-project svg").css({
+          width: "20",
+        });
+        $(".btn-latest-project").css({
+          color: "#ffffff",
+          background: "#2c4753",
+        });
+      });
+    }
+    console.log(whatIDoDistanceToTop);
+  });
 });

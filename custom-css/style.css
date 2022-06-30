@@ -6,7 +6,8 @@
 :root{
     --lightbluegray:#537B8C;
     --darkbluegray:#2C4753;
-    --maroon: #621D26;
+    --lightmaroon: #992f3d;
+    --darkmaroon: #6e232d;
 }
 a{
     text-decoration: none;

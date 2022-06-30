@@ -9,7 +9,7 @@
     height: 50vh;
 }
 .who-am-i > div > div:nth-child(2){
-    background-color: var(--maroon);
+    background-color: var(--lightbluegray);
     color: white;
     height: 50vh;
 }
