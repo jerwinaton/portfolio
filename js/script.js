@@ -38,6 +38,18 @@ $(document).ready(() => {
     }, 500);
   }, 2700);
 
+  // hide contact links icons upon page load
+  $(".contact-links").find("img").hide();
+
+  // contact links hover show icons
+  $(".contact-links").on("mouseover", (obj) => {
+    $(obj.currentTarget).find("img").show("fast");
+  });
+
+  $(".contact-links").on("mouseleave", (obj) => {
+    $(obj.currentTarget).find("img").hide("fast");
+  });
+
   // latest project mouse over
   $(".btn-latest-project").on("mouseover", () => {
     $(".btn-latest-project svg > path").css({
