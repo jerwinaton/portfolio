@@ -131,6 +131,11 @@ $(document).ready(() => {
 
     // who am i section change
     if (whoAmIDistanceToTop >= 300) {
+      // add color to body to prevent the lines between sections to be seen
+      $("body").css({
+        background: "var(--lightbluegray)",
+      });
+
       whoAmISection.css({
         background: "var(--lightbluegray)",
       });
@@ -138,6 +143,11 @@ $(document).ready(() => {
       landingPage.css({ background: "var(--lightbluegray)" });
       $(".contact-links").css({ background: "var(--darkbluegray)" });
     } else if (whoAmIDistanceToTop < 300) {
+      // add color to body to prevent the lines between sections to be seen
+      $("body").css({
+        background: "var(--lightmaroon)",
+      });
+
       whoAmISection.css("background", "var(--lightmaroon)");
       $("#profile-image-circle").css("fill", "var(--darkmaroon)");
 
@@ -179,6 +189,10 @@ $(document).ready(() => {
 
     // who i do section change
     if (whatIDoDistanceToTop < 300) {
+      // add color to body to prevent the lines between sections to be seen
+      $("body").css({
+        background: "var(--lightbluegray)",
+      });
       whoAmISection.css({
         background: "var(--lightbluegray)",
       });
@@ -222,6 +236,9 @@ $(document).ready(() => {
       $(letsConnectSection).addClass("bg-primary");
       $(whatIDoSection).addClass("bg-primary");
       $(".project-images-container").addClass("bg-primary");
+
+      // add color to body to prevent the lines between sections to be seen
+      $("body").css(background, "#0d6efd");
     } else {
       $(whatIDoSection).removeClass("bg-primary");
       $(letsConnectSection).removeClass("bg-primary");
