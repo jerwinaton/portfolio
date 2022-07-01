@@ -97,7 +97,7 @@ $(document).ready(() => {
       background: "#2c4753",
     });
   });
-  // change bg color on scroll
+  // change bg color on scroll **************************************************************************
   $(window).on("scroll", () => {
     var scrollTop = $(window).scrollTop();
 
@@ -109,10 +109,15 @@ $(document).ready(() => {
     let whatIDo = $(".what-i-do").offset().top;
     let whatIDoDistanceToTop = whatIDo - scrollTop;
 
+    // get what i do distance to top
+    let letsConnect = $(".lets-connect").offset().top;
+    let letsConnectDistanceToTop = letsConnect - scrollTop;
+
     // get sections
     let landingPage = $(".landing-page");
     let whoAmISection = $(".who-am-i > div > div:nth-child(2)");
     let whatIDoSection = $(".what-i-do");
+    let letsConnectSection = $(".lets-connect");
 
     // add transition options to the sections' background property
     landingPage.css("transition", "background .3s ease");
@@ -121,6 +126,8 @@ $(document).ready(() => {
     whoAmISection.css("transition", "background .3s ease");
     whatIDoSection.css("transition", "background .3s ease");
     $(".project-images-container").css("transition", "background .3s ease");
+
+    letsConnectSection.css("transition", "background .3s ease");
 
     // who am i section change
     if (whoAmIDistanceToTop >= 300) {
@@ -203,6 +210,19 @@ $(document).ready(() => {
           background: "#2c4753",
         });
       });
+    }
+    // end of what i do section
+
+    // let's connect section
+    console.log(letsConnectDistanceToTop);
+    if (letsConnectDistanceToTop < 300) {
+      $(letsConnectSection).addClass("bg-primary");
+      $(whatIDoSection).addClass("bg-primary");
+      $(".project-images-container").addClass("bg-primary");
+    } else {
+      $(whatIDoSection).removeClass("bg-primary");
+      $(letsConnectSection).removeClass("bg-primary");
+      $(".project-images-container").removeClass("bg-primary");
     }
   });
 });
