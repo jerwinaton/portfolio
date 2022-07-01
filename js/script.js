@@ -10,15 +10,15 @@ $(document).ready(() => {
       200
     );
   }
-});
 
-$("#letsConnectLink").click(function () {
-  $("html, body").animate(
-    {
-      scrollTop: $("#letsConnect").offset().top,
-    },
-    200
-  );
+  $("#letsConnectLink").click(function () {
+    $("html, body").animate(
+      {
+        scrollTop: $("#letsConnect").offset().top,
+      },
+      200
+    );
+  });
 
   //  profile image hover => change bg and scale
   //   add transition
@@ -204,6 +204,5 @@ $("#letsConnectLink").click(function () {
         });
       });
     }
-    console.log(whatIDoDistanceToTop);
   });
 });
