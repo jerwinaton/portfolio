@@ -136,6 +136,7 @@ $(document).ready(() => {
       });
       $("#profile-image-circle").css("fill", "var(--darkbluegray)");
       landingPage.css({ background: "var(--lightbluegray)" });
+      $(".contact-links").css({ background: "var(--darkbluegray)" });
     } else if (whoAmIDistanceToTop < 300) {
       whoAmISection.css("background", "var(--lightmaroon)");
       $("#profile-image-circle").css("fill", "var(--darkmaroon)");
@@ -145,6 +146,8 @@ $(document).ready(() => {
 
       $(".project-images-container").css("background", "var(--lightmaroon)");
       $(".btn-latest-project").css("background", "var(--darkmaroon)");
+
+      $(".contact-links").css({ background: "var(--darkmaroon)" });
 
       // latest project mouse over
       $(".btn-latest-project").on("mouseover", () => {
