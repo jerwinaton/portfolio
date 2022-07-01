@@ -1,4 +1,25 @@
 $(document).ready(() => {
+  // scroll to lets connect
+  var hash = window.location.hash;
+  console.log(hash);
+  if (hash == "#letsConnect") {
+    $("html, body").animate(
+      {
+        scrollTop: $("#letsConnect").offset().top,
+      },
+      200
+    );
+  }
+});
+
+$("#letsConnectLink").click(function () {
+  $("html, body").animate(
+    {
+      scrollTop: $("#letsConnect").offset().top,
+    },
+    200
+  );
+
   //  profile image hover => change bg and scale
   //   add transition
   $("#profile-img-bg").find("circle").css("transition", "fill .3s ease");
