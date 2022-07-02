@@ -181,7 +181,7 @@ $(document).ready(() => {
       });
 
       whoAmISection.css({
-        background: "var(--lightbluegray)",
+        background: "var(--darkbluegray)",
       });
       $("#profile-image-circle").css("fill", "var(--darkbluegray)");
       landingPage.css({ background: "var(--lightbluegray)" });
