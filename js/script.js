@@ -1,5 +1,49 @@
 $(document).ready(() => {
-  // scroll to lets connect
+  // custom navbar  ***********************************************************************
+  $(".black-backdrop-for-custom-nav").hide();
+  $(".navbar-toggler").on("click", (obj) => {
+    //if nav button is clicked
+    if (!$(obj.currentTarget).hasClass("collapsed")) {
+      $(".black-backdrop-for-custom-nav").fadeIn();
+      $(".navbar-toggler-icon").css({
+        "background-image": "url('images/x.svg')",
+      });
+    } else {
+      $(".black-backdrop-for-custom-nav").fadeOut();
+      $(".navbar-toggler-icon").css(
+        "background-image",
+        `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")`
+      );
+    }
+  });
+  $(".navbar-dark .navbar-nav .nav-link").on("click", () => {
+    $(".navbar-toggler").addClass("collapsed");
+    $(".navbar-collapse").removeClass("show");
+    $(".navbar-toggler-icon").css(
+      "background-image",
+      `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")`
+    );
+  });
+  $(window).click(function () {
+    if ($(".navbar-collapse").hasClass("show")) {
+      $(".navbar-toggler-icon").css(
+        "background-image",
+        `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")`
+      );
+      $(".navbar-collapse").removeClass("show");
+      $(".navbar-toggler").addClass("collapsed");
+      $(".black-backdrop-for-custom-nav").fadeOut();
+    }
+    $(".navbar-nav").click((obj) => {
+      if ($(obj.target).hasClass("navbar-nav")) {
+        return false;
+      } else {
+        $(".black-backdrop-for-custom-nav").fadeOut();
+      }
+    });
+  });
+
+  // scroll to lets connect ***********************************************************************
   var hash = window.location.hash;
   console.log(hash);
   if (hash == "#letsConnect") {
@@ -20,7 +64,7 @@ $(document).ready(() => {
     );
   });
 
-  //  profile image hover => change bg and scale
+  //  profile image hover => change bg and scale ***********************************************************************
   //   add transition
   $("#profile-img-bg").find("circle").css("transition", "fill .3s ease");
   $("#profile-img-bg").css("transition", "transform .3s ease");
@@ -39,7 +83,7 @@ $(document).ready(() => {
     $("#profile-img-bg").css("transform", "scale(1)");
   });
 
-  // changing heading texts below jerwin aton
+  // changing heading texts below jerwin aton ***********************************************************************
   let headingTexts = [
     "I Design Websites",
     "I Develop Websites",
@@ -59,7 +103,7 @@ $(document).ready(() => {
     }, 500);
   }, 2700);
 
-  // hide contact links icons upon page load
+  // hide contact links icons upon page load ***********************************************************************
   $(".contact-links").find("img").hide();
 
   // contact links hover show icons
@@ -238,7 +282,7 @@ $(document).ready(() => {
       $(".project-images-container").addClass("bg-primary");
 
       // add color to body to prevent the lines between sections to be seen
-      $("body").css(background, "#0d6efd");
+      $("body").css("background", "#0d6efd");
     } else {
       $(whatIDoSection).removeClass("bg-primary");
       $(letsConnectSection).removeClass("bg-primary");
