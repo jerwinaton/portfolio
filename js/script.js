@@ -4,12 +4,12 @@ $(document).ready(() => {
   $(".navbar-toggler").on("click", (obj) => {
     //if nav button is clicked
     if (!$(obj.currentTarget).hasClass("collapsed")) {
-      $(".black-backdrop-for-custom-nav").fadeIn();
+      $(".black-backdrop-for-custom-nav").fadeIn("fast");
       $(".navbar-toggler-icon").css({
         "background-image": "url('images/x.svg')",
       });
     } else {
-      $(".black-backdrop-for-custom-nav").fadeOut();
+      $(".black-backdrop-for-custom-nav").fadeOut("fast");
       $(".navbar-toggler-icon").css(
         "background-image",
         `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")`
