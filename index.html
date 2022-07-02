@@ -17,34 +17,46 @@
 <link rel="stylesheet" href="custom-css/button.css">
 <link rel="stylesheet" href="custom-css/what-i-do.css">
 <link rel="stylesheet" href="custom-css/lets-connect.css">
+<link rel="stylesheet" href="custom-css/custom-nav.css">
 <head>
   <body>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+    <nav class="navbar navbar-dark fixed-top ">
       <div class="container-md">
           <a class="navbar-brand" href="index.html">jerwin aton</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto align-items-center">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">who am i</a>
+            <ul class="navbar-nav ms-auto p-5">
+              <li class="nav-item border-bottom border-secondary w-100">
+                Menu
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="education.html">education</a>
+                <a class="nav-link fs-4 active" aria-current="page" href="index.html">who am i</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="skills.html">skills</a>
+                <a class="nav-link fs-4" href="education.html">education</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#letsConnect" id="letsConnectLink">let's connect!</a>
+                <a class="nav-link fs-4" href="skills.html">skills</a>
               </li>
-           
+              <li class="nav-item">
+                <a class="nav-link fs-4" href="#letsConnect" id="letsConnectLink">let's connect!</a>
+              </li>
+              <script>
+                $(document).ready(()=>{
+                $(".nav-link").click((obj)=>{
+                  $(".nav-link").removeClass("active");
+                  $(obj.currentTarget).addClass("active");
+                });
+                });
+              </script>
             </ul>
           </div>
         </div>
       </nav>
       <div id="butter">
+        <div class="black-backdrop-for-custom-nav"></div>
       <section class="landing-page">
         <div class="container-md h-100">
           <div class="row align-items-center justify-content-center h-75">
