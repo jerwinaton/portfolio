@@ -29,7 +29,7 @@
 }
 
 .black-backdrop-for-custom-nav{
-    height: 100%;
+    height: 200%;
     width: 100%;
     background: rgba(20, 20, 20, 0.75);
     position: absolute;
