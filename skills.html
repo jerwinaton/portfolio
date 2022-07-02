@@ -47,12 +47,12 @@
           </nav>
         <div id="butter">
           <div class="black-backdrop-for-custom-nav"></div>
-        <section class="front-end pb-5">
+        <section class="front-end pb-5 bg-primary text-light">
             <div class="container-md">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-12 col-sm-8">
                         <h1 class="text-center">Front-end</h1>
-                        <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium accusamus suscipit quibusdam hic nesciunt dolorem ad fugiat praesentium perferendis.</p>
+                        <p class="text-center">Front-end development focuses on the outside look of the website. I used these technologies to design and create <b>user-friendly, responsive, interactive, and stunning websites.</b> </p>
                     </div>
                     <div class="col-12 col-sm-8 pt-5">  
                         <div class="skills-logos slider">
@@ -76,7 +76,7 @@
                 <div class="row justify-content-center">
                     <div class="col-12 col-sm-8">
                         <h1 class="text-light text-center">Back-end</h1>
-                        <p class="text-light text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium accusamus suscipit quibusdam hic nesciunt dolorem ad fugiat.</p>
+                        <p class="text-light text-center">Back-end development focuses on the capability of a website to process and store information. I used these technologies to create websites with <b>Create, Read, Update, Delete (CRUD) capabilities.</b></p>
                     </div>
                     <div class="col-12 col-sm-8 pt-5">
                         <div class="d-flex flex-row justify-content-center">
@@ -106,6 +106,12 @@
     dots: false,
     pauseOnHover: false,
     responsive: [
+    {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
       {
         breakpoint: 768,
         settings: {
@@ -113,9 +119,9 @@
         },
       },
       {
-        breakpoint: 520,
+        breakpoint: 576,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 4,
         },
       },
     ],
