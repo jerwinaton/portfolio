@@ -43,6 +43,14 @@
               <li class="nav-item">
                 <a class="nav-link fs-4" href="#letsConnect" id="letsConnectLink">let's connect!</a>
               </li>
+              <script>
+                $(document).ready(()=>{
+                $(".nav-link").click((obj)=>{
+                  $(".nav-link").removeClass("active");
+                  $(obj.currentTarget).addClass("active");
+                });
+                });
+              </script>
             </ul>
           </div>
         </div>
