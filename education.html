@@ -43,13 +43,13 @@
               </div>
             </div>
           </nav>
-        <div id="butter">
+          <div id="butter">
           <div class="black-backdrop-for-custom-nav"></div>
-        <div class="container-md">
+          <div class="container-md">
           <div class="accordion" id="accordionEducation">
             <div class="accordion-item">
               <h2 class="accordion-header" id="panelCollege">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelCollege-collapse" aria-expanded="true" aria-controls="panelCollege-collapse">
+                <button class="accordion-button" data-bgcolor="#FF6A6A" type="button" data-bs-toggle="collapse" data-bs-target="#panelCollege-collapse" aria-expanded="true" aria-controls="panelCollege-collapse">
                   College
                 </button>
               </h2>
@@ -71,7 +71,7 @@
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header" id="panelSHSG12">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelSHSG12-collapse" aria-expanded="false" aria-controls="panelSHSG12-collapse">
+                <button class="accordion-button collapsed" data-bgcolor="#3B28AD" type="button" data-bs-toggle="collapse" data-bs-target="#panelSHSG12-collapse" aria-expanded="false" aria-controls="panelSHSG12-collapse">
                   Senior High Grade 12
                 </button>
               </h2>
@@ -94,7 +94,7 @@
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header" id="panelSHSG11">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelSHSG11-collapse" aria-expanded="false" aria-controls="panelSHSG11-collapse">
+                <button class="accordion-button collapsed" data-bgcolor="#262160" type="button" data-bs-toggle="collapse" data-bs-target="#panelSHSG11-collapse" aria-expanded="false" aria-controls="panelSHSG11-collapse">
                   Senior High Grade 11
                 </button>
               </h2>
@@ -117,7 +117,7 @@
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header" id="panelElemHigh">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelElemHigh-collapse" aria-expanded="false" aria-controls="panelElemHigh-collapse">
+                <button class="accordion-button collapsed" data-bgcolor="#3B28AD" type="button" data-bs-toggle="collapse" data-bs-target="#panelElemHigh-collapse" aria-expanded="false" aria-controls="panelElemHigh-collapse">
                   Elementary - High School
                 </button>
               </h2>
@@ -140,7 +140,17 @@
           </div>
         </div>
         
-   
+   <script>
+    $(document).ready(()=>{
+      $(".accordion-button").on('click',(obj)=>{
+        if($(".accordion-button").hasClass("collapsed")){
+          let bgcolor = obj.target.getAttribute('data-bgcolor');
+          $('body').css({"background":bgcolor,"transition":"background .2s ease"})
+
+        }
+      });
+    });
+   </script>
          
         </div>
     </body>
