@@ -275,7 +275,7 @@ $(document).ready(() => {
     // end of what i do section
 
     // let's connect section
-    console.log(letsConnectDistanceToTop);
+    // console.log(letsConnectDistanceToTop);
     if (letsConnectDistanceToTop < 300) {
       $(letsConnectSection).addClass("bg-primary");
       $(whatIDoSection).addClass("bg-primary");
